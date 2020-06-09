@@ -11,6 +11,10 @@ public partial class User_QuestionBankSearch : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         User user = (User)Session["CurUser"];
-        Favorite favorite = (Favorite)Session["CurFavorite"];
+    }
+
+    protected void btnSearch_Click(object sender, EventArgs e)
+    {
+
     }
 }
