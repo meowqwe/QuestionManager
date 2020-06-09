@@ -7,10 +7,10 @@
                 题库名：
             </th>
             <th>
-                <asp:TextBox ID="QBname" runat="server" Height="60px" Width="310px"></asp:TextBox>
+                <asp:TextBox ID="txtQBname" runat="server" Height="60px" Width="310px"></asp:TextBox>
             </th>
         </tr>
     </table>
-    <asp:Button ID="Submit" runat="server" OnClick="Submit_Click" Height="33px" Width="279px" />
+    <asp:Button ID="Submit" Text="提交" runat="server" OnClick="Submit_Click" Height="33px" Width="279px" />
 </asp:Content>
 
