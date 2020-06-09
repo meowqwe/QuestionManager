@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMaster.master" AutoEventWireup="true" CodeFile="Regist.aspx.cs" Inherits="Admin_AdminMain" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMaster.master" AutoEventWireup="true" CodeFile="AddUser.aspx.cs" Inherits="Admin_AddUser" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="Server">
-        <style>
+    <style>
     li{
         list-style:none;
     }

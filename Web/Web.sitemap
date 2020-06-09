@@ -14,7 +14,7 @@
     </siteMapNode>
     <siteMapNode url="~\Admin\AdminMain.aspx" title="管理页面"  description="">
       <siteMapNode url="~\Admin\UserManagement.aspx" title="用户管理" description="">
-        <siteMapNode url="~\Admin\Regist.aspx" title="添加新用户" description=""/>
+        <siteMapNode url="~\Admin\AddUser.aspx" title="添加新用户" description=""/>
       </siteMapNode>
       <siteMapNode url="~\Admin\QuestionBankManagement.aspx" title="题库管理" description="">
         <siteMapNode url="~\Admin\AddBlankQuestionBank.aspx" title="添加新题库" description=""/>

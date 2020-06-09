@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Regist : System.Web.UI.Page
+public partial class Admin_AddUser : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -38,7 +38,7 @@ public partial class Regist : System.Web.UI.Page
             return;
         }
         //将信息封装到User对象中
-        User user = new User();
+        QBModels.User user = new User();
         user.UuserName1 = strName;
         user.UpassWord1 = strPwd;
         user.Urole1 = role;

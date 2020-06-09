@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMapNode url="AdminMain.aspx" title="管理页面"  description="">
   <siteMapNode url="UserManagement.aspx" title="用户管理" description="">
-    <siteMapNode url="Regist.aspx" title="添加新用户" description=""/>
+    <siteMapNode url="AddUser.aspx" title="添加新用户" description=""/>
   </siteMapNode>
   <siteMapNode url="QuestionBankManagement.aspx" title="题库管理" description="">
     <siteMapNode url="AddBlankQuestionBank.aspx" title="添加新题库" description=""/>

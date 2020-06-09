@@ -265,7 +265,7 @@ namespace QBDAL
         /// <returns></returns>
         public static IList<title> GetAllTitle(QuestionBank questionBank)
         {
-            string sqlAll = "SELECT * FROM QBT WHERE QBname=@QBname";
+            string sqlAll = "SELECT title.Tnum,Tstem,Tsubject,Ttype,Tanswer FROM title,QBT WHERE QBname=@QBname and title.Tnum=QBT.Tnum";
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@QBname",questionBank.QBname1)

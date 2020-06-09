@@ -58,6 +58,12 @@
             答案：
             <asp:TextBox ID="txtAnswer" runat="server"></asp:TextBox>
         </div>
+        <div style="float:left;padding-left:150px;">
+            <asp:Button ID="Submit" Text="提交" runat="server" OnClick="Submit_Click" Height="21px" Width="53px" />
+        </div>
+        <div style="float:left;padding-left:250px;">
+            <asp:Button ID="NEXT" Text="下一题" runat="server" Onclick="NEXT_Click" Height="20px" Width="57px"/>
+        </div>
     </div>
 </asp:Content>
 
