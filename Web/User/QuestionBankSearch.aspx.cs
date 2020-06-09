@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QBModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,7 @@ public partial class User_QuestionBankSearch : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        User user = (User)Session["CurUser"];
+        Favorite favorite = (Favorite)Session["CurFavorite"];
     }
 }

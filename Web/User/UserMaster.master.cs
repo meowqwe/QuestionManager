@@ -28,6 +28,7 @@ public partial class User_UserMaster : System.Web.UI.MasterPage
     {
         //清空Session中的数据
         Session["CurUser"] = null;
+        Session["CurFavorite"] = null;
         Response.Redirect("../Login.aspx");
     }
 }
