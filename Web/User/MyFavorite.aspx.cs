@@ -12,6 +12,7 @@ public partial class User_Favorite : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         User user = (User)Session["CurUser"];
+        
     }
 
     protected void BtnCreate_Click(object sender, EventArgs e)
@@ -29,5 +30,13 @@ public partial class User_Favorite : System.Web.UI.Page
         {
             Response.Write("<Script>alert('添加失败！');</Script>");
         }
+    }
+
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+        string Fname = ((LinkButton)sender).CommandArgument.ToString();
+        Favorite favorite =FavoriteManager.GetFavoriteByName(Fname);
+        Session.Add("CurFavorite", favorite);
+        Response.Redirect("FavoriteInfo.aspx");
     }
 }

@@ -24,7 +24,13 @@
                 <asp:BoundField DataField="Fname1" HeaderText="Fname1" SortExpression="Fname1" />
                 <asp:BoundField DataField="QBnumber1" HeaderText="QBnumber1" SortExpression="QBnumber1" />
                 <asp:CommandField ShowEditButton="True" />
-                <asp:CommandField ShowSelectButton="True" />
+
+                <asp:TemplateField ShowHeader="False">
+                    <ItemTemplate>
+                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" CommandArgument='<%Eval("Fname1") %>' CommandName="edit" Text="选择" OnClick="LinkButton1_Click"></asp:LinkButton>
+                    </ItemTemplate>
+                </asp:TemplateField>
+
             </Columns>
             <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
             <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />

@@ -137,11 +137,11 @@ namespace QBDAL
                 SqlDataReader reader = DBHelper.GetReader(sql, new SqlParameter("@Fname", Fname));
                 if (reader.Read())
                 {
-                    Favorite Favorite = new Favorite();
-                    Favorite.Fname1 = (string)reader["Fname"];
-                    Favorite.QBnumber1 = (int)reader["QBnumber"];
+                    Favorite favorite = new Favorite();
+                    favorite.Fname1 = (string)reader["Fname"];
+                    favorite.QBnumber1 = (int)reader["QBnumber"];
                     reader.Close();
-                    return Favorite;
+                    return favorite;
                 }
                 else
                 {
