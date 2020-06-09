@@ -124,7 +124,7 @@ namespace QBDAL
 			}
 			finally
 			{
-				Connection.Close();
+				//Connection.Close();
 			}
 
 		}

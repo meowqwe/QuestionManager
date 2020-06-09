@@ -8,7 +8,7 @@
   </siteMapNode>
   <siteMapNode url="MyFavorite.aspx" title="我的收藏" description="">
     <siteMapNode url="FavoriteInfo.aspx" title="收藏夹信息" description="">
-      <siteMapNode url="Exercises.aspx" title="题目页面" description=""/>
+      <siteMapNode url="Exercises1.aspx" title="题目页面" description=""/>
     </siteMapNode>
   </siteMapNode>
 </siteMapNode>
