@@ -12,4 +12,9 @@ public partial class User_FavoriteInfo : System.Web.UI.Page
     {
         User user = (User)Session["CurUser"];
     }
+
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+
+    }
 }

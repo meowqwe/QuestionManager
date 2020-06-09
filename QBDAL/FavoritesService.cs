@@ -131,7 +131,7 @@ namespace QBDAL
         /// <returns></returns>
         public static Favorite GetFavoriteByName(string Fname)
         {
-            string sql = "SELECT * FROM Favorite WHERE Fname=@Fname";
+            string sql = "SELECT * FROM Favorites WHERE Fname=@Fname";
             try
             {
                 SqlDataReader reader = DBHelper.GetReader(sql, new SqlParameter("@Fname", Fname));
@@ -259,7 +259,7 @@ namespace QBDAL
         /// <returns></returns>
         public static IList<QuestionBank> GetAllQuestionBank(Favorite Favorite)
         {
-            string sqlAll = "SELECT * FROM FQB WHERE Fname=@Fname";
+            string sqlAll = "SELECT QBnum,FQB.QBname,QBqnum FROM FQB,questionbank WHERE Fname=@Fname and FQB.QBname=questionbank.QBname";
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@Fname",Favorite.Fname1)

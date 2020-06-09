@@ -4,6 +4,7 @@ using System.Text;
 
 namespace QBModels
 {
+    [Serializable]
     public class Favorite
     {
         private string Fname;

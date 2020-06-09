@@ -21,13 +21,13 @@
         </table>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="3" DataSourceID="odsFavorite" Height="185px" Width="654px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellSpacing="2">
             <Columns>
-                <asp:BoundField DataField="Fname1" HeaderText="Fname1" SortExpression="Fname1" />
-                <asp:BoundField DataField="QBnumber1" HeaderText="QBnumber1" SortExpression="QBnumber1" />
+                <asp:BoundField DataField="Fname1" HeaderText="收藏名" SortExpression="Fname1" />
+                <asp:BoundField DataField="QBnumber1" HeaderText="题库数量" SortExpression="QBnumber1" />
                 <asp:CommandField ShowEditButton="True" />
 
                 <asp:TemplateField ShowHeader="False">
                     <ItemTemplate>
-                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" CommandArgument='<%Eval("Fname1") %>' CommandName="edit" Text="选择" OnClick="LinkButton1_Click"></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" CommandArgument='<%# Eval("Fname1") %>' CommandName="Choose" Text="选择" OnClick="LinkButton1_Click"></asp:LinkButton>
                     </ItemTemplate>
                 </asp:TemplateField>
 
