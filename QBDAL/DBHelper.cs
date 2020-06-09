@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-//using System.Configuration;
+using System.Configuration;
 
 
 namespace QBDAL
@@ -20,8 +20,7 @@ namespace QBDAL
 			get
 			{
 				//从配置文件中获取连接数据库的连接字符串
-				//string connectionString = ConfigurationManager.ConnectionStrings["QBConStr"].ConnectionString;
-				string connectionString = "";
+				string connectionString = ConfigurationManager.ConnectionStrings["QBConStr"].ConnectionString;
 				if (connection == null)
 				{
 					connection = new SqlConnection(connectionString);
