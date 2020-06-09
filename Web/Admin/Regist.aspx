@@ -1,19 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Regist.aspx.cs" Inherits="Regist" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMaster.master" AutoEventWireup="true" CodeFile="Regist.aspx.cs" Inherits="Admin_AdminMain" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>新用户添加</title>
-    <style>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="Server">
+        <style>
     li{
         list-style:none;
     }
 </style>
-</head>
-<body>
-    <form id="form1" runat="server">
         <ul>
             <li>
                 &nbsp;&nbsp;&nbsp;用户名：
@@ -79,6 +71,5 @@
                     OnClick="btnReset_Click" />
             </li>
         </ul>
-    </form>
-</body>
-</html>
+</asp:Content>
+

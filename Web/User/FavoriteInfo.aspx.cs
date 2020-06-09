@@ -1,4 +1,5 @@
-﻿using QBModels;
+﻿using QBBLL;
+using QBModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,9 @@ public partial class User_FavoriteInfo : System.Web.UI.Page
 
     protected void LinkButton1_Click(object sender, EventArgs e)
     {
-
+        string QBname = ((LinkButton)sender).CommandArgument.ToString();
+        QuestionBank questionBank = QuestionBankManager.GetQuestionBankByQBnum(QBname);
+        Session.Add("CurQuestionBank", questionBank);
+        Response.Redirect("Exercises");
     }
 }

@@ -7,7 +7,7 @@
             <asp:BoundField DataField="QBqnum1" HeaderText="题目数量" SortExpression="QBqnum1" />
             <asp:TemplateField ShowHeader="False">
                 <ItemTemplate>
-                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" CommandArgument='<%Eval("QBname1") %>' CommandName="Btn" Text="开始做题" OnClick="LinkButton1_Click"></asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" CommandArgument='<%# Eval("QBname1") %>' CommandName="Btn" Text="开始做题" OnClick="LinkButton1_Click"></asp:LinkButton>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
