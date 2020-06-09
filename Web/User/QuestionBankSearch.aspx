@@ -13,7 +13,7 @@
     </table>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="odsQuestionBank" Height="202px" Width="509px">
         <Columns>
-            <asp:BoundField DataField="QBname1" HeaderText="数据库名" SortExpression="QBname1" />
+            <asp:BoundField DataField="QBname1" HeaderText="题库名" SortExpression="QBname1" />
             <asp:BoundField DataField="QBqnum1" HeaderText="题目数量" SortExpression="QBqnum1" />
             <asp:CommandField ShowSelectButton="True" />
         </Columns>
@@ -29,8 +29,7 @@
     </asp:GridView>
     <asp:ObjectDataSource ID="odsQuestionBank" runat="server" SelectMethod="GetQuestionBankBySql" TypeName="QBBLL.QuestionBankManager">
         <SelectParameters>
-            <asp:ControlParameter ControlID="GridView1" Name="safeSql" PropertyName="SelectedValue" Type="String" />
-            <asp:ControlParameter ControlID="GridView1" Name="values" PropertyName="SelectedValue" Type="Object" />
+            <asp:QueryStringParameter DefaultValue="SELECT * FROM questionbank" Name="safeSql" QueryStringField="sql" Type="String" />
         </SelectParameters>
     </asp:ObjectDataSource>
 </asp:Content>
