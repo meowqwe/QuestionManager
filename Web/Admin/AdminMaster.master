@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>管理员页面</title>
+    <style>
+        image{
+            border:0;
+        }
+        div{
+            color:#000000;
+            font-size12px;
+        }
+        td{
+            color:#000000;
+            font-size:12px;
+        }
+        .middle-bg{
+            background:url(../images/bg.jpg)0px 0px no-repeat;
+            width:970px;
+        }
+        .middle-left{
+            width:180px;
+        }
+        .middle-left1{
+            width:150px;
+            border-left:1px #7AB271 solid;
+            border-right:1px #7AB271 solid;
+            padding:10px 5px 10px 5px;
+        }
+        .bottom{
+            width:80px;
+            color:#000000;
+            line-height:30px;
+            font-size:12px;
+            text-align:center;
+            text-decoration:none;
+        }
+        .bottom:hover{
+            width:80px;
+            color:#000000;
+            line-height:30px;
+            font-size:12px;
+            text-align:center;
+            text-decoration:none;
+        }
+        .bcopyright{
+            color:#666666;
+            font-size:12px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!--头部开始-->
+    <div style="width:970px;height:93px;background-image:url('../images/topbg.gif');">
+        <table style="width:970px;height:93px;">
+            <tr>
+                <td style="width:600px">
+                    &nbsp;&nbsp;<img src="../images/logo.jfif" style="height: 70px; width: 83px; margin-left: 0px" /><img src="../images/title.png" style="height: 72px; width: 398px; margin-left: 0px" />&nbsp; &nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                </td>
+                <td style="text-align:right;vertical-align:bottom">
+                    用户名：
+                    <asp:Label ID="lblUserName" runat="server"> </asp:Label>&nbsp;&nbsp;
+                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">注销
+                    </asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="middle-bg">
+        <!--中间部分开始-->
+        <div style="padding-left:30px;font-size:13px;line-height:30px;font-weight:bold">
+            您现在的位置
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+        </div>
+        <div style="padding:15px 0px 15px 0px;">
+            <table style="width:900px;border:0px;text-align:center;border-spacing:0px;">
+                <tr>
+                    <!--左边菜单栏开始-->
+                    <td class="middle-left" style="vertical-align:top;">
+                        <div>
+                            <img src="../images/per_menu_top.gif" />
+                        </div>
+                        <div class="middle-left1">
+                            <asp:TreeView ID="tvStoreClass" runat="server" DataSourceID="XmlDataSource1">
+                                <DataBindings>
+                                    <asp:TreeNodeBinding DataMember="siteMapNode" NavigateUrlField="url" TextField="title" />
+                                </DataBindings>
+                            </asp:TreeView>
+                            <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/Admin/adminTree.xml">
+                            </asp:XmlDataSource>
+                        </div>
+                    </td>
+                    <!--右边主要内容开始-->
+                    <td style="vertical-align:top;">
+                        <table style="width:100%;border:0px;border-spacing:0px;">
+                            <tr>
+                                <td>
+                                    <asp:ContentPlaceHolder ID="cphContent" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--网页底部开始-->
+        <div style="text-align:center">
+            <img src="../images/line-1.gif" width="960" height="6" /><br />
+            <a href="#" class="bottom">平台简介</a>&nbsp;&nbsp;
+            <a href="#" class="bottom">免责声明</a>&nbsp;&nbsp;
+            <a href="#" class="bottom">使用技巧</a>&nbsp;&nbsp;
+            <a href="#" class="bottom">招聘英才</a>&nbsp;&nbsp;
+        </div>
+        <div class="bcopyright">
+            Copyright @iTeacher,All Rights Reserved
+            <img src="../images/validate.gif">
+            <span style="font-size:13px;color:#000000;">
+                鲁ICP证 88888888 号
+            88888 号
+            </span>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

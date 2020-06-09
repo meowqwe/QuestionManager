@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMapNode url="PersonMain.aspx" title="个人主页"  description="">
+  <siteMapNode url="UploadTitle.aspx" title="题目上传" description=""/>
+  <siteMapNode url="QuestionBankSearch.aspx" title="题库查询" description="">
+    <siteMapNode url="QuestionBankInfo.aspx" title="题库信息" description="">
+      <siteMapNode url="Exercises.aspx" title="题目页面" description=""/>
+    </siteMapNode>
+  </siteMapNode>
+  <siteMapNode url="MyFavorite.aspx" title="我的收藏" description="">
+    <siteMapNode url="FavoriteInfo.aspx" title="收藏夹信息" description="">
+      <siteMapNode url="Exercises.aspx" title="题目页面" description=""/>
+    </siteMapNode>
+  </siteMapNode>
+</siteMapNode>
