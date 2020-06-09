@@ -300,7 +300,7 @@ namespace QBDAL
         /// <returns></returns>
         public static IList<Favorite> GetAllFavorite(User User)
         {
-            string sqlAll = "SELECT * FROM UF WHERE Uusername=@Uusername";
+            string sqlAll = "SELECT Favorites.Fname,QBnumber FROM Favorites,UF WHERE Uusername=@Uusername and Favorites.Fname = UF.Fname";
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@Uusername",User.UuserName1)

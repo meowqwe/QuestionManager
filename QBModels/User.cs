@@ -2,6 +2,7 @@
 
 namespace QBModels
 {
+    [Serializable]
     public class User
     {
         private string UuserName = String.Empty;//用户名
