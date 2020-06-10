@@ -227,6 +227,12 @@ namespace QBDAL
                 };
                 sql += sql += ";SELECT @ @IDENTITY";
                 DBHelper.ExecuteCommand(sql, para);
+                sql = "UPDATE questionBank SET QBnumber=QBnumber+1 WHERE Fname=@Fname";
+                SqlParameter[] para1 = new SqlParameter[]
+                {
+                    new SqlParameter("@Fname",questionBank.QBname1),
+                };
+                DBHelper.ExecuteCommand(sql, para1);
             }
             catch (Exception e)
             {
