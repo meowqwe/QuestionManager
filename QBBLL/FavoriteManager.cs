@@ -10,9 +10,9 @@ namespace QBBLL
     public static partial class FavoriteManager
     {
         //创建空白收藏夹
-        public static Favorite CreateBlankFavorite(Favorite Favorite)
+        public static Favorite CreateBlankFavorite(string Fname)
         {
-            return FavoritesService.CreateBlankFavorite(Favorite);
+            return FavoritesService.CreateBlankFavorite(Fname);
         }
         //删除收藏夹
         public static void DeleteFavorite(Favorite Favorite)

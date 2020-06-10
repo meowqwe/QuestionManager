@@ -1,4 +1,5 @@
-﻿using QBDAL;
+﻿using QBBLL;
+using QBDAL;
 using QBModels;
 using System;
 using System.Collections.Generic;
@@ -20,5 +21,21 @@ public partial class User_QuestionBankSearch : System.Web.UI.Page
     {
         string sql = "SELECT * FROM questionbank WHERE QBname=" + txtQBname.Text;
         odsQuestionBank.SelectParameters["safeSql"].DefaultValue = sql;
+    }
+
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+        string QBname = ((LinkButton)sender).CommandArgument.ToString();
+        QuestionBank questionBank = QuestionBankManager.GetQuestionBankByQBnum(QBname);
+        Session.Add("CurQuestionBank", questionBank);
+        Response.Redirect("Exercises1.aspx");
+    }
+
+    protected void LinkButton2_Click(object sender, EventArgs e)
+    {
+        string QBname = ((LinkButton)sender).CommandArgument.ToString();
+        QuestionBank questionBank = QuestionBankManager.GetQuestionBankByQBnum(QBname);
+        Session.Add("CurQuestionBank", questionBank);
+        Response.Redirect("FavoriteQB.aspx");
     }
 }

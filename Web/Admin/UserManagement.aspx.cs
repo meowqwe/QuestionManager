@@ -15,6 +15,6 @@ public partial class Admin_UserManagement : System.Web.UI.Page
 
     protected void AddUser_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Regist.aspx");
+        Response.Redirect("AddUser.aspx");
     }
 }

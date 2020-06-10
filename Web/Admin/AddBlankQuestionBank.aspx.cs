@@ -17,10 +17,7 @@ public partial class Admin_AddBlankQuestionBank : System.Web.UI.Page
     protected void Submit_Click(object sender, EventArgs e)
     {
         string strQBname = txtQBname.Text;
-        QuestionBank questionBank = new QuestionBank();
-        questionBank.QBname1 = strQBname;
-        questionBank.QBqnum1 = 0;
-        questionBank = QuestionBankManager.CreateBlankQuestionBank(questionBank);
+        QuestionBank questionBank = QuestionBankManager.CreateBlankQuestionBank(strQBname);
         if (questionBank != null)
         {
             Response.Write("<Script>alert('创建成功');</Script>");

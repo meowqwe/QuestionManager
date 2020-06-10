@@ -14,17 +14,17 @@ namespace QBDAL
         /// </summary>
         /// <param name="Favorite"></param>
         /// <returns></returns>
-        public static Favorite CreateBlankFavorite(Favorite Favorite)
+        public static Favorite CreateBlankFavorite(string Fname)
         {
             String sql =
                 "INSERT Favorites(Fname,QBnumber)" +
-                "VALUES(@Fname,@QBnumber)";
+                "VALUES(@Fname,0)";
             sql += ";SELECT @ @IDENTITY";
             try
             {
                 SqlParameter[] para = new SqlParameter[]
                 {
-                    new SqlParameter("@QBnumber",Favorite.Fname1)
+                    new SqlParameter("@QBnumber",Fname)
                 };
                 string newNum = DBHelper.GetScalar(sql, para).ToString();
                 return GetFavoriteByNum(newNum);

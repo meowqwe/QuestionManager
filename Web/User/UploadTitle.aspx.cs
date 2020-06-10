@@ -72,7 +72,9 @@ public partial class User_UploadTitle : System.Web.UI.Page
             else
             {
                 questionBank = QuestionBankManager.CreateBlankQuestionBank(strQBname);
+                QuestionBankManager.TitleAppend(title, questionBank);
             }
+            Response.Write("<Script>alert('添加成功');</Script>");
 
         }
         else

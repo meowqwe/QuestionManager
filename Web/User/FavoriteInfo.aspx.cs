@@ -19,6 +19,6 @@ public partial class User_FavoriteInfo : System.Web.UI.Page
         string QBname = ((LinkButton)sender).CommandArgument.ToString();
         QuestionBank questionBank = QuestionBankManager.GetQuestionBankByQBnum(QBname);
         Session.Add("CurQuestionBank", questionBank);
-        Response.Redirect("Exercises");
+        Response.Redirect("Exercises.aspx");
     }
 }

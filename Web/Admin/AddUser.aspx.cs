@@ -11,7 +11,8 @@ public partial class Admin_AddUser : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        User user = (User)Session["CurUser"];
+        UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
     }
     protected void btnAdd_Click(object sender, EventArgs e)
     {

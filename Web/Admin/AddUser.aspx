@@ -27,12 +27,12 @@
             </li>
             <li>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:RegularExpressionValidator 
+                <asp:RequiredFieldValidator 
                     ID="RequiredFieldValidator2" 
                     runat="server"
                     ErrorMessage="必须填写密码"
                     ControlToValidate="txtPwd">
-                </asp:RegularExpressionValidator>
+                </asp:RequiredFieldValidator>
             </li>
             <li>
                 &nbsp;&nbsp;&nbsp;&nbsp;班级：
