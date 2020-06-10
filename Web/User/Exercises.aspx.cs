@@ -20,16 +20,29 @@ public partial class User_Exercises : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         Titlenum = 0;
+        LoadTitle(Titlenum);
     }
 
     protected void NEXT_Click(object sender, EventArgs e)
     {
-
+        Random ran = new Random();
+        int MaxInt = Questionbank.QBqnum1;
+        Titlenum = ran.Next(MaxInt);
+        LoadTitle(Titlenum);
     }
 
     protected void Submit_Click(object sender, EventArgs e)
     {
-
+        string strAnswer = txtAnswer.Text;
+        if (strAnswer.Equals(Tlist[Titlenum].Tanswer1))
+        {
+            Response.Write("<Script>alert('答案正确！')</Script>");
+        }
+        else
+        {
+            Response.Write("<Script>alert('答案错误！')</Script>");
+            lblAnswer.Text = Tlist[Titlenum].Tanswer1;
+        }
     }
     protected void LoadTitle(int Titlenum)
     {
@@ -39,6 +52,35 @@ public partial class User_Exercises : System.Web.UI.Page
         if (Tlist[Titlenum].Ttype1.Equals("选择"))
         {
             options options = new options();
+            IList<options> Olist = TitleManager.GetAllOptions(Tlist[Titlenum]);
+            for(int i = 0; i < 4; i++)
+            {
+                AddOptions(i, Olist);
+            }
+
+        }
+    }
+    protected void AddOptions(int optionNum,IList<options> Olist)
+    {
+        switch (optionNum)
+        {
+            case 0:
+                lblA.Text = "A";
+                lblAtext.Text = Olist[0].Otext1;
+                break;
+            case 1:
+                lblB.Text = "B";
+                lblBtext.Text = Olist[0].Otext1;
+                break;
+            case 2:
+                lblC.Text = "C";
+                lblCtext.Text = Olist[0].Otext1;
+                break;
+            case 3:
+                lblD.Text = "D";
+                lblDtext.Text = Olist[0].Otext1;
+                break;
+
         }
     }
 }

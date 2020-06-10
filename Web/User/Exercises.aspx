@@ -24,6 +24,10 @@
                 </td>
             </tr>
         </table>
+        <div style="float:right;padding-right:230px; height: 56px; width: 139px;">
+                    正确答案：<br />
+                    <asp:Label ID="lblAnswer" runat="server"></asp:Label>
+        </div>
         <table style="font-size:16px;">
             <tr>
                 <td>

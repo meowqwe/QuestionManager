@@ -22,5 +22,6 @@
         <SortedDescendingHeaderStyle BackColor="#93451F" />
     </asp:GridView>
     <asp:ObjectDataSource ID="odsUser" runat="server" DataObjectTypeName="QBModels.User" DeleteMethod="DeleteUser" InsertMethod="AddUser" SelectMethod="GetAllUsers" TypeName="QBBLL.UserManager" UpdateMethod="ModifyUser"></asp:ObjectDataSource>
+    <asp:Button ID="AddUser" runat="server" Text="添加新用户" OnClick="AddUser_Click" />
 </asp:Content>
 

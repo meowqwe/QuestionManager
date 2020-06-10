@@ -244,7 +244,7 @@ namespace QBDAL
         /// <returns></returns>
         public static IList<options> GetAllOptions(title title)
         {
-            string sqlAll = "SELECT * FROM OT WHERE Tnum=@Tnum";
+            string sqlAll = "SELECT OT.Onum,Oname,Otext FROM options,OT WHERE Tnum=@Tnum and options.Onum=OT.Onum";
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@Tnum",title.Tnum1)

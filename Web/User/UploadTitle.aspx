@@ -4,6 +4,14 @@
     <table>
         <tr>
             <td style="font-size:large;font-weight:bold; height: 22px;">
+                题库：
+            </td>
+            <td style="height: 22px">
+                <asp:TextBox ID="txtQuestionBank" runat="server" Height="17px" Width="431px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size:large;font-weight:bold; height: 22px;">
                 题干：
             </td>
             <td style="height: 22px">

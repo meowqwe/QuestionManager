@@ -55,7 +55,7 @@ namespace QBBLL
             TitleService.AddOptions(options, title);
         }
         //获取题库选项列表
-        public static IList<options> GetAllTitle(title Title)
+        public static IList<options> GetAllOptions(title Title)
         {
             return TitleService.GetAllOptions(Title);
         }
