@@ -20,6 +20,7 @@ public partial class User_UploadTitle : System.Web.UI.Page
         string strSubject = txtSubject.Text;
         string[] str = { txtA.Text, txtB.Text, txtC.Text, txtD.Text };
         string strAnswer = txtAnswer.Text;
+        string strQBname = txtQuestionBank.Text;
         string Type="选择";
         if (rdXuanze.Checked)
         {
@@ -62,12 +63,22 @@ public partial class User_UploadTitle : System.Web.UI.Page
                     }
 
                 }
-                Response.Write("<Script>alert('添加成功');</Script>");
             }
+            QuestionBank questionBank = QuestionBankManager.GetQuestionBankByName(strQBname);
+            if (questionBank != null)
+            {
+                QuestionBankManager.TitleAppend(title, questionBank);
+            }
+            else
+            {
+                questionBank = QuestionBankManager.CreateBlankQuestionBank(strQBname);
+            }
+
         }
         else
         {
             Response.Write("<Script>alert('添加失败');</Script>");
         }
+
     }
 }

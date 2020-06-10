@@ -10,9 +10,9 @@ namespace QBBLL
     public static partial class QuestionBankManager
     {
         //创建空白题库
-        public static QuestionBank CreateBlankQuestionBank(QuestionBank questionBank)
+        public static QuestionBank CreateBlankQuestionBank(string QBname)
         {
-            return QuestionBankService.CreateBlankQuestionBank(questionBank);
+            return QuestionBankService.CreateBlankQuestionBank(QBname);
         }
         //删除题库
         public static void DeleteQuestionBank(QuestionBank questionbank)

@@ -14,18 +14,17 @@ namespace QBDAL
         /// </summary>
         /// <param name="questionBank"></param>
         /// <returns></returns>
-        public static QuestionBank CreateBlankQuestionBank(QuestionBank questionBank)
+        public static QuestionBank CreateBlankQuestionBank(string QBname)
         {
             String sql =
                 "INSERT questionbank(QBnum,QBname,QBqnum)" +
-                "VALUES(@QBnum,@QBname,@QBqnum)";
+                "VALUES(@QBnum,@QBname,0)";
             sql += ";SELECT @ @IDENTITY";
             try
             {
                 SqlParameter[] para = new SqlParameter[]
                 {
-                    new SqlParameter("@QBname",questionBank.QBname1),
-                    new SqlParameter("@QBanum",questionBank.QBqnum1)
+                    new SqlParameter("@QBname",QBname),
                 };
                 string newNum = DBHelper.GetScalar(sql, para).ToString();
                 return GetQuestionBankByQBnum(newNum);
